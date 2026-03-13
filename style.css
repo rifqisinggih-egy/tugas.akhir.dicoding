@@ -1,0 +1,238 @@
+:root {
+  --biru: #3d74b6;
+  --cream: #fbf5de;
+  --coklatmuda: #eac8a6;
+  --merah: #dc3c22;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background: var(--cream);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: var(--biru);
+  border-bottom: 1px solid #fafafa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cream);
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: white;
+}
+
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0.3rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--coklatmuda);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding: 0;
+  border-bottom: 0.1rem solid var(--biru);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* navbar end */
+
+/* main content start */
+/* kiri */
+main {
+  display: flex;
+  gap: 1rem;
+  padding-top: 8rem;
+  align-items: flex-start;
+}
+
+.content {
+  flex: 3;
+  padding: 0 7% 1.4rem;
+}
+
+.content .judul h3 {
+  text-align: left;
+  font-size: 2.6rem;
+  margin-bottom:;
+  color: var(--biru);
+}
+
+.content .judul .karya {
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.content .judul p {
+  color: var(--biru);
+}
+.content .paragraf h4 {
+  color: var(--biru);
+}
+
+.content .paragraf p {
+  text-align: left;
+  margin-top: 1rem;
+  color: var(--biru);
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.content .paragraf li {
+  margin-top: 0;
+  color: var(--biru);
+  padding: 0.2rem;
+}
+
+.content .paragraf ul {
+  padding-left: 2rem;
+}
+/* main kelar */
+
+/* aside */
+/* kanan */
+aside {
+  flex: 1;
+  margin: 0 2rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+}
+
+aside h4 {
+  text-align: center;
+  color: var(--biru);
+  margin-bottom: 1rem;
+}
+
+.profilfoto img {
+  width: 100%;
+  max-width: 9rem;
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 10px;
+}
+
+aside p {
+  color: var(--biru);
+  margin-top: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* footer */
+footer {
+  background-color: var(--merah);
+  text-align: center;
+  padding: 1rem 0 2rem;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+}
+
+footer .socials {
+  padding: 0.5rem 0;
+}
+
+footer .socials a {
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover,
+footer .credit a:hover {
+  color: var(--cream);
+}
+
+footer .links {
+  margin-bottom: 0.5rem;
+}
+
+footer .links a {
+  padding: 0rem 1rem;
+  color: var(--cream);
+}
+
+footer .credit {
+  font-size: 1rem;
+}
+
+footer .credit a {
+  color: var(--cream);
+  font-weight: 700;
+}
+
+/* footer end */
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding-top: 9rem;
+  }
+
+  .content {
+    padding: 0 2rem;
+  }
+
+  aside {
+    margin: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 1rem 5%;
+  }
+
+  .navbar .navbar-logo {
+    font-size: 1.5rem;
+  }
+
+  .navbar .navbar-nav a {
+    font-size: 1rem;
+  }
+
+  .content .judul h3 {
+    font-size: 2rem;
+  }
+}
